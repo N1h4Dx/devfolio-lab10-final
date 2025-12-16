@@ -297,3 +297,19 @@ body::after {
   }
 }
 
+/* ===== Lab 11 validation styles ===== */
+
+.field-error {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.form-control.invalid {
+  border: 2px solid #dc3545;
+}
+
+.form-control.valid {
+  border: 2px solid #198754;
+}
+

@@ -884,35 +884,69 @@ I am Nihad, i am a university student studying Script Programming and web develo
           </div>
         </div>
 
-        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
-          <div class="row gy-4">
+          <form id="extendedForm" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
+      <div class="row gy-4">
 
-            <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-            </div>
+        <div class="col-md-6">
+          <label>Name</label>
+          <input type="text" id="userName" class="form-control" required>
+          <small id="err-userName" class="field-error"></small>
+        </div>
 
-            <div class="col-md-6 ">
-              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-            </div>
+        <div class="col-md-6">
+          <label>Surname</label>
+          <input type="text" id="userSurname" class="form-control" required>
+          <small id="err-userSurname" class="field-error"></small>
+        </div>
 
-            <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-            </div>
+        <div class="col-md-6">
+          <label>Email</label>
+         <input type="email" id="userEmail" class="form-control" required>
+          <small id="err-userEmail" class="field-error"></small>
+        </div>
 
-            <div class="col-md-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-            </div>
+        <div class="col-md-6">
+          <label>Phone</label>
+          <input type="tel" id="userPhone" class="form-control" placeholder="+370 6xx xxxxx" required>
+          <small id="err-userPhone" class="field-error"></small>
+        </div>
 
-            <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
+        <div class="col-md-12">
+          <label>Address</label>
+          <input type="text" id="userAddress" class="form-control" required>
+          <small id="err-userAddress" class="field-error"></small>
+        </div>
 
-              <button type="submit">Send Message</button>
-            </div>
+        <div class="col-md-12">
+          <label>Rating 1 (1–10)</label>
+          <input type="range" id="rating1" min="1" max="10" value="5">
+        </div>
 
-          </div>
-        </form><!-- End Contact Form -->
+        <div class="col-md-12">
+          <label>Rating 2 (1–10)</label>
+          <input type="range" id="rating2" min="1" max="10" value="5">
+        </div>
+
+        <div class="col-md-12">
+          <label>Rating 3 (1–10)</label>
+          <input type="range" id="rating3" min="1" max="10" value="5">
+        </div>
+
+        <div class="col-md-12 text-center">
+          <button id="submitBtn" type="submit" disabled>Submit</button>
+        </div>
+
+        <div class="col-md-12">
+          <div id="submittedData"></div>
+          <div id="avgLine"></div>
+        </div>
+
+      </div>
+    </form>
+
+    <div id="successPopup" class="success-popup" hidden>
+      Form submitted successfully!
+    </div>
 
       </div>
 
@@ -963,7 +997,10 @@ I am Nihad, i am a university student studying Script Programming and web develo
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom.js"></script>
+
 
 </body>
 
 </html>
+
